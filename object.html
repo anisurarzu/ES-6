@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const students=[
+            {id:21,name:'manna'},
+            {id:202,name:'OmarSany'},
+            {id:203,name:'dipjol'},
+            {id:204,name:'kuddus'}
+         ]
+
+        // const output=[]
+        // for(let i=0;i<students.length;i++){
+           //  const element=students[i];
+           //  const result=element.name;
+            // output.push(result);
+         //}
+        // console.log(output);
+
+        ////ponditi style map/////\
+
+            const names=students.map(s=>s.name);
+            const bigger=students.filter(s=>s.id>40);
+            const finder=students.find(s=>s.id>40);
+
+            console.log(names);
+            console.log(bigger);
+            console.log(finder);
+
+
+
+
+
+
+    </script>
+</body>
+</html>

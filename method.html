@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const newPerson={
+            name:'Akash',
+            id:'ab12',
+            salary:15000,
+            getFullDetails: function(){
+                console.log(this.name,this.id);
+            },
+            getChargeBill:function(amount,tips,tax){
+                this.salary=this.salary-amount-tips-tax;
+                return this.salary;
+            }
+
+        }
+
+        const HeroPerson={
+            name:'Batas',
+            id:'ab12',
+            salary:18000,
+            getFullDetails: function(){
+                console.log(this.name,this.id);
+            }
+
+        }
+          const ZeroPerson={
+            name:'Tatas',
+            id:'ab12',
+            salary:28000,
+            getFullDetails: function(){
+                console.log(this.name,this.id);
+            }
+        }
+       // const heroChargeBill=newPerson.getChargeBill.bind(HeroPerson);
+       // heroChargeBill(350);
+        newPerson.getChargeBill.call(ZeroPerson, 3000,500,30);
+       //newPerson.getChargeBill(5000);
+       newPerson.getChargeBill.apply(HeroPerson,[2500,30,40]);
+       document.write(ZeroPerson.salary);
+       document.write('</br>');
+       document.write(HeroPerson.salary);
+        
+    </script>
+</body>
+</html>
